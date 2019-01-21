@@ -67,6 +67,9 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
   gem 'launchy'          # a useful debugging aid for user stories
+  gem 'rspec-rails' 
+  gem 'rails-controller-testing'
+  gem 'factory_bot_rails' 
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
