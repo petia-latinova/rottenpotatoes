@@ -16,4 +16,17 @@ class Movie < ApplicationRecord
   def grandfathered?
     release_date && release_date < @@grandfathered_date
   end
+  
+  def self.similar_movies(movie)
+    Movie.where director: movie.director
+  end
+  
+  FactoryBot.define do
+    factory :movie do
+      title { 'A Fake Title' } # default values
+      rating { 'PG' }
+      release_date { 10.years.ago }
+    end
+  end
+
 end
