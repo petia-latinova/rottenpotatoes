@@ -21,12 +21,4 @@ class Movie < ApplicationRecord
     Movie.where director: movie.director
   end
   
-  FactoryBot.define do
-    factory :movie do
-      title { 'A Fake Title' } # default values
-      rating { 'PG' }
-      release_date { 10.years.ago }
-    end
-  end
-
 end
